@@ -1,11 +1,7 @@
-header{
-    color:#fff;
+a{
+    color:#000;
 
-    a{
-        color:#000;
-
-        &:hover{
-            color:#333;
+        &.active{
+            color:orange;
         }
     }
-}
