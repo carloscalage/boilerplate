@@ -2,7 +2,12 @@
     "name": "boilerplate",
     "author": "Carlos",
     "description": "Minicurso boilerplate",
-    "scripts": {},
+    "scripts": {
+        "build": "npm-run-all --sequential build:views build:sass",
+        "build:views": "pug src/views/ --out public/ --pretty",
+        "start": "npm-run-all --sequential build",
+        "build:sass": "node-sass src/assests/sass/main.scss public/css/main.css"
+    },
     "devDependencies": {
         "@babel/cli": "^7.1.5",
         "@babel/core": "^7.1.5",
